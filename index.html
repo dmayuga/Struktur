@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no" />
+  <title>TAGWERK</title>
+  <meta name="description" content="Deine Tagesstruktur – abhaken, speichern, nichts verlieren." />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta name="theme-color" content="#1a1613" />
+  <!-- iOS standalone -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="TAGWERK" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link rel="icon" href="icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <div class="top-row">
+        <div class="date-block">
+          <div class="weekday" id="weekday">—</div>
+          <div class="date" id="date">—</div>
+        </div>
+        <div class="ring" id="ring" aria-label="Tagesfortschritt">
+          <svg viewBox="0 0 44 44" width="44" height="44">
+            <circle class="ring-bg" cx="22" cy="22" r="18" />
+            <circle class="ring-fg" id="ringFg" cx="22" cy="22" r="18" />
+          </svg>
+          <span class="ring-num" id="ringNum">0%</span>
+        </div>
+      </div>
+      <div class="daytag" id="daytag"></div>
+    </header>
+
+    <main id="content"></main>
+
+    <footer class="foot">
+      <span id="savedHint">Alles wird lokal gespeichert.</span>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
